@@ -233,7 +233,10 @@ export default {
     } catch {
       error = "Invalid configuration";
     }
-    if (error) return json({ error: "service_not_configured" }, 503);
+    if (error) {
+  console.error("Worker configuration:", error);
+  return json({ error: "service_not_configured" }, 503);
+}
 
     const url = new URL(request.url);
     if (url.hostname !== HOSTNAME) return json({ error: "invalid_host" }, 400);
