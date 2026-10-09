@@ -248,7 +248,13 @@ export default {
       });
     }
     if (url.pathname !== "/mcp") return json({ error: "not_found" }, 404);
-    if (!(await authorize(request, env))) return challenge(env);
+    const rpc = request.method === "POST"
+  ? await request.clone().json().catch(() => null)
+  : null;
+const discovery = rpc && !Array.isArray(rpc) &&
+  ["initialize", "notifications/initialized", "tools/list", "ping"].includes(rpc.method);
+
+if (!discovery && !(await authorize(request, env))) return challenge(env);
     return createMcpHandler(() => createServer(env), {
       route: "/mcp",
       allowedHostnames: [HOSTNAME],
