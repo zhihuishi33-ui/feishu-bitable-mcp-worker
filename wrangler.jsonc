@@ -4,5 +4,14 @@
   "compatibility_date": "2026-10-09",
   "compatibility_flags": ["nodejs_compat"],
   "workers_dev": true,
-  "keep_vars": true
+  "keep_vars": true,
+  "vars": {
+    "FEISHU_APP_ID": "cli_aa42f9a7d43a5be5",
+    "FEISHU_APP_TOKEN": "TeoObYpYya0tFmsHsORcvUrBnHd",
+    "FEISHU_TABLE_ID": "tbl9IAVKf90XR5g2",
+    "MCP_URL": "https://feishu-bitable-mcp.zhihuishi33.workers.dev/mcp",
+    "AUTH0_ISSUER": "https://dev-f80ko3dbeuvlnwba.us.auth0.com/",
+    "AUTH0_JWKS_URL": "https://dev-f80ko3dbeuvlnwba.us.auth0.com/.well-known/jwks.json",
+    "ALLOWED_AUTH0_SUB": "auth0|6ac87dc326f52ddc9b4a1d1f"
+  }
 }
