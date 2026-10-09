@@ -1,0 +1,7 @@
+{
+  "name": "feishu-bitable-mcp",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-09",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true
+}
